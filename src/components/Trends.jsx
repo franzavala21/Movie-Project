@@ -4,6 +4,7 @@ import {AiOutlineClose, AiFillPlayCircle} from 'react-icons/ai'
 import NoImg from './descarga.jpg.png'
 import {Container} from './NavBar'
 import '../Styles/Videos.css'
+import TrailerTrends from '../Trailers/TrailerTrends'
 
 
 function Trends() {
@@ -48,6 +49,7 @@ function Trends() {
             </>
           )
         })}
+        {trailer ? console.log : <TrailerTrends TrendsTitle={trendTitle}/>}
         <AiOutlineClose id={trailer ? "Nothing" : "Exit1"} className={toggle ? "DarkTheme" : "LightThemeClose"} fontSize={45} color="#fff" cursor={"pointer"} onClick={() => setTrailer(true)}/>
 
       </div>

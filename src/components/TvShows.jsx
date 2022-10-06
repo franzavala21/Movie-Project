@@ -3,6 +3,7 @@ import React, { Fragment, useContext } from 'react'
 import { useState, useEffect } from 'react'
 import { AiFillPlayCircle, AiOutlineClose } from 'react-icons/ai'
 import '../Styles/Videos.css'
+import TrailerTvShows from '../Trailers/TrailerTvShow'
 import NoImg from './descarga.jpg.png'
 import {Container} from './NavBar'
 
@@ -52,6 +53,7 @@ function TvShows() {
           </>
         )
       })}
+      {trailer ? console.log : <TrailerTvShows TvShowsTitle={title}/>}
       <AiOutlineClose id={trailer ? "Nothing" : "Exit1"} className={toggle ? "DarkTheme" : "LightThemeClose"} fontSize={45} color="#fff" cursor={"pointer"} onClick={() => setTrailer(true)}/>
       </div>
       </div>
